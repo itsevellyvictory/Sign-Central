@@ -1,0 +1,46 @@
+name: signcentral
+description: "A new Flutter project."
+
+# A linha a seguir impede que o pacote seja publicado acidentalmente em pub.dev
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+# 1. Dependências (Juntas em uma única seção)
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Pacotes necessários:
+  cupertino_icons: ^1.0.8
+  google_sign_in: ^6.1.6 # Adicionando o pacote Google Sign-In
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+# 2. Seção Flutter (Única e correta)
+flutter:
+  # Garante que as fontes do Material Design funcionem
+  uses-material-design: true
+
+  # Configuração dos Assets
+  assets:
+    - assets/logo_sign_central.png
+    - assets/illustration_main.png
+    - assets/ # Geralmente é melhor listar arquivos individuais, mas esta linha também funciona
+    - assets/images/
+  # Configuração das Fontes
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter_28pt-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter_28pt-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter_28pt-Bold.ttf
+          weight: 700
