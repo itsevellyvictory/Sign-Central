@@ -16,10 +16,7 @@ class MenuHeader extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [
-            Color(0xFF0D47A1),
-            Color(0xFF42A5F5),
-          ],
+          colors: [Color(0xFF0D47A1), Color(0xFF42A5F5)],
           stops: [0.0, 1.0],
         ),
       ),
@@ -110,10 +107,7 @@ class TeacherCard extends StatelessWidget {
             const SizedBox(height: 2),
             Text(
               institution,
-              style: const TextStyle(
-                fontSize: 14,
-                color: Color(0xFF9CA3AF),
-              ),
+              style: const TextStyle(fontSize: 14, color: Color(0xFF9CA3AF)),
             ),
           ],
         ),
@@ -198,16 +192,15 @@ class CourseCard extends StatelessWidget {
                 const SizedBox(height: 4),
                 Row(
                   children: [
-                    const Icon(Icons.star,
-                        color: Color(0xFFFFB300), size: 16),
-                    const Icon(Icons.star,
-                        color: Color(0xFFFFB300), size: 16),
-                    const Icon(Icons.star,
-                        color: Color(0xFFFFB300), size: 16),
-                    const Icon(Icons.star,
-                        color: Color(0xFFFFB300), size: 16),
-                    const Icon(Icons.star_half,
-                        color: Color(0xFFFFB300), size: 16),
+                    const Icon(Icons.star, color: Color(0xFFFFB300), size: 16),
+                    const Icon(Icons.star, color: Color(0xFFFFB300), size: 16),
+                    const Icon(Icons.star, color: Color(0xFFFFB300), size: 16),
+                    const Icon(Icons.star, color: Color(0xFFFFB300), size: 16),
+                    const Icon(
+                      Icons.star_half,
+                      color: Color(0xFFFFB300),
+                      size: 16,
+                    ),
                     const SizedBox(width: 4),
                     Text(
                       '${course.rating.toStringAsFixed(1)} (${course.reviews})',
@@ -373,11 +366,7 @@ class _BottomNavItem extends StatelessWidget {
       onTap: () => onTap(index),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-        child: Icon(
-          icon,
-          color: color,
-          size: 26,
-        ),
+        child: Icon(icon, color: color, size: 26),
       ),
     );
   }
@@ -406,21 +395,9 @@ class _MenuScreenState extends State<MenuScreen> {
         'inst': 'Harvard',
         'img': 'assets/png/evy.png',
       },
-      {
-        'name': 'Luis Fernando',
-        'inst': 'IFMA',
-        'img': 'assets/png/lulu.png',
-      },
-      {
-        'name': 'Josenildo',
-        'inst': 'IFMA',
-        'img': 'assets/png/josenildo.png',
-      },
-      {
-        'name': 'Clesivane',
-        'inst': 'USP',
-        'img': 'assets/png/clesivane.png',
-      },
+      {'name': 'Luis Fernando', 'inst': 'IFMA', 'img': 'assets/png/lulu.png'},
+      {'name': 'Josenildo', 'inst': 'IFMA', 'img': 'assets/png/josenildo.png'},
+      {'name': 'Clesivane', 'inst': 'USP', 'img': 'assets/png/clesivane.png'},
     ];
 
     final List<Course> courses = [
@@ -446,8 +423,7 @@ class _MenuScreenState extends State<MenuScreen> {
         rating: 5.0,
         reviews: 900,
         teacherName: 'Luis Fernando',
-        description:
-            'Estratégias de acessibilidade e inclusão na área de T.I.',
+        description: 'Estratégias de acessibilidade e inclusão na área de T.I.',
         imagePath: 'assets/png/curso3.png',
       ),
     ];
@@ -459,8 +435,7 @@ class _MenuScreenState extends State<MenuScreen> {
           MenuHeader(shortName: shortName),
           Expanded(
             child: SingleChildScrollView(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

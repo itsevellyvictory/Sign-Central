@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:signcentral/screens/course_screens/menu.dart';
 
 class CourseCard extends StatelessWidget {
-  final Course course;  // Ajuste: CourseCard → Course (ou o tipo do seu modelo)
+  final Course course; // Ajuste: CourseCard → Course (ou o tipo do seu modelo)
   final VoidCallback onTap;
 
-  const CourseCard({
-    super.key,
-    required this.course,
-    required this.onTap,
-  });
+  const CourseCard({super.key, required this.course, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +31,9 @@ class CourseCard extends StatelessWidget {
             child: Container(
               width: 130,
               height: 120,
-              color: const Color(0xFF2979FF), // substitua por Image.asset se tiver arte
+              color: const Color(
+                0xFF2979FF,
+              ), // substitua por Image.asset se tiver arte
               // child: Image.asset(course.imagePath, fit: BoxFit.cover),
             ),
           ),
@@ -59,7 +58,11 @@ class CourseCard extends StatelessWidget {
                     const Icon(Icons.star, color: Color(0xFFFFB300), size: 16),
                     const Icon(Icons.star, color: Color(0xFFFFB300), size: 16),
                     const Icon(Icons.star, color: Color(0xFFFFB300), size: 16),
-                    const Icon(Icons.star_half, color: Color(0xFFFFB300), size: 16),
+                    const Icon(
+                      Icons.star_half,
+                      color: Color(0xFFFFB300),
+                      size: 16,
+                    ),
                     const SizedBox(width: 4),
                     Text(
                       '${course.rating.toStringAsFixed(1)} (${course.reviews})',
@@ -102,7 +105,9 @@ class CourseCard extends StatelessWidget {
                         vertical: 8,
                       ),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF003A1D), // Cor corrigida: Color(0xFF003A1D)
+                        color: const Color(
+                          0xFF003A1D,
+                        ), // Cor corrigida: Color(0xFF003A1D)
                         borderRadius: BorderRadius.circular(999),
                       ),
                       child: const Text(

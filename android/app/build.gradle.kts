@@ -6,11 +6,7 @@ plugins {
 }
 
 android {
-<<<<<<< HEAD
     namespace = "com.example.teste"
-=======
-    namespace = "com.example.signcentral"
->>>>>>> b86550beafe84c9347949a9ebcc82192fa68d5e0
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -25,11 +21,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-<<<<<<< HEAD
         applicationId = "com.example.teste"
-=======
-        applicationId = "com.example.signcentral"
->>>>>>> b86550beafe84c9347949a9ebcc82192fa68d5e0
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
